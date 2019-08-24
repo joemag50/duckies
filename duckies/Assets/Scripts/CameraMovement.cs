@@ -24,9 +24,9 @@ public class CameraMovement : MonoBehaviour
     void Update()
     {
         if (!arrived)
-            transform.position = Vector3.MoveTowards(transform.position, posNext + new Vector3(0, 0, -100), Time.deltaTime * speed);
+            transform.position = Vector3.MoveTowards(transform.position, posNext + new Vector3(0, 0, -390), Time.deltaTime * speed);
 
-        if (transform.position == posNext + new Vector3(0, 0, -100))
+        if (transform.position == posNext + new Vector3(0, 0, -390))
             arrived = true;
     }
 
