@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -72,6 +73,7 @@ public class CameraMovement : MonoBehaviour
 
     public void GoToGame()
     {
-        Debug.Log("Suck my dick");
+        StaticVariables.opPlayer1 = 0;
+        SceneManager.LoadScene("Game");
     }
 }

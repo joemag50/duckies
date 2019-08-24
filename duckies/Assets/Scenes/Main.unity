@@ -598,7 +598,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 383278456}
         m_MethodName: GoToGame
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -983,7 +983,6 @@ MonoBehaviour:
   pos2P: {fileID: 1845678800}
   posHowToPlay: {fileID: 436263371}
   posCredits: {fileID: 733026134}
-  posNext: {fileID: 1494924918}
 --- !u!1 &436263367
 GameObject:
   m_ObjectHideFlags: 0

@@ -319,6 +319,13 @@ MonoBehaviour:
   pos2: {fileID: 654799422}
   waterPlane: {fileID: 6107614501044622083, guid: 9035fae21278945678d1a1718a449a6e,
     type: 3}
+  skins:
+  - {fileID: 3663996516885933361, guid: ba180b57589e141659048291ccc9b65a, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &2104236514
 GameObject:
   m_ObjectHideFlags: 0
