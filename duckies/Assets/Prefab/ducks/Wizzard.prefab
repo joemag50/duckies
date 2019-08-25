@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 3663996516885933354}
   - component: {fileID: -5512794825031191141}
   - component: {fileID: 5260995766492337688}
+  - component: {fileID: 2274323855588279357}
   m_Layer: 0
   m_Name: Wizzard
   m_TagString: Untagged
@@ -182,6 +183,19 @@ MonoBehaviour:
   labelPoints: {fileID: 4335561115105347042}
   labelLife: {fileID: 5397681796294093959}
 --- !u!65 &5260995766492337688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663996516885933361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5495167, y: 1.1879371, z: 1.382322}
+  m_Center: {x: 0.06250133, y: 0.51742744, z: 0.0023593903}
+--- !u!65 &2274323855588279357
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -393,6 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860fbf379ed4f4a45a03f535e20859c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunprefab: {fileID: 3762341319089291539, guid: cee791cc54de24738bceddf90838d3ed,
+    type: 3}
 --- !u!1001 &335529600503889707
 PrefabInstance:
   m_ObjectHideFlags: 0

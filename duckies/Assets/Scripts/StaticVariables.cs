@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class StaticVariables
 {
-    static public int opPlayer1 = 0;
-    static public int opPlayer2 = 0;
+    static public int opPlayer1 = 3;
+    static public int opPlayer2 = 2;
 }

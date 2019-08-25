@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 3663996516885933354}
   - component: {fileID: -5512794825031191141}
   - component: {fileID: 5260995766492337688}
+  - component: {fileID: 6239639297407646919}
   m_Layer: 0
   m_Name: Potter
   m_TagString: Untagged
@@ -280,11 +281,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3663996516885933361}
   m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7590202, y: 1.0566238, z: 1.03256}
+  m_Center: {x: 0.007150316, y: 0.50611496, z: -0.006119919}
+--- !u!65 &6239639297407646919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663996516885933361}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.2354454, y: 1.0249046, z: 0.9060799}
-  m_Center: {x: 0.21953669, y: 0.49025536, z: -0.007995987}
+  m_Size: {x: 1.669253, y: 1.0249046, z: 0.9060799}
+  m_Center: {x: 0.0026331902, y: 0.49025536, z: -0.007995987}
 --- !u!82 &4258176020026037559
 AudioSource:
   m_ObjectHideFlags: 0
@@ -393,6 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860fbf379ed4f4a45a03f535e20859c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunprefab: {fileID: 3762341319089291539, guid: cee791cc54de24738bceddf90838d3ed,
+    type: 3}
 --- !u!1001 &1201491995676417311
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -182,6 +182,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 860fbf379ed4f4a45a03f535e20859c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gunprefab: {fileID: 3762341319089291539, guid: cee791cc54de24738bceddf90838d3ed,
+    type: 3}
 --- !u!1 &2726017635057911241
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +271,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0.12109375, y: 0.068359375, z: 0.0625, w: -0.033203125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -285,11 +287,12 @@ GameObject:
   - component: {fileID: 3663996516885933355}
   - component: {fileID: 3663996516885933364}
   - component: {fileID: 3663996516885933354}
-  - component: {fileID: -5512794825031191141}
   - component: {fileID: 5260995766492337688}
+  - component: {fileID: 4321188734573101144}
+  - component: {fileID: 3245771093131418327}
   m_Layer: 0
   m_Name: Pato
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,7 +359,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontal: Horizontal
   vertical: Vertical
---- !u!114 &-5512794825031191141
+--- !u!65 &5260995766492337688
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663996516885933361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2401774, y: 1.1016136, z: 1.0141512}
+  m_Center: {x: 0.29788485, y: 0.5286099, z: -0.023784542}
+--- !u!65 &4321188734573101144
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3663996516885933361}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2354454, y: 1.0249046, z: 0.8985619}
+  m_Center: {x: 0.21953669, y: 0.49025536, z: -0.01175499}
+--- !u!114 &3245771093131418327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,19 +409,6 @@ MonoBehaviour:
   ShootingKey: 
   labelPoints: {fileID: 3141703140726361187}
   labelLife: {fileID: 6726963320337933574}
---- !u!65 &5260995766492337688
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3663996516885933361}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.2354454, y: 1.0249046, z: 0.9060799}
-  m_Center: {x: 0.21953669, y: 0.49025536, z: -0.007995987}
 --- !u!1001 &2052339752394805673
 PrefabInstance:
   m_ObjectHideFlags: 0

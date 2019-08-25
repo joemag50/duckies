@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-
+    public GameObject gunprefab;
     private AudioSource mAudio;
     float damage;
     float range = 300f;
     Jugador selfPlayer;
-
 
     float coolDownTime = 2;
     float initTime = 2;
@@ -38,6 +37,11 @@ public class Gun : MonoBehaviour
         if (Juego.paused)
             return;
 
+        GameObject o = Instantiate(gunprefab, transform.position, transform.rotation);
+        o.GetComponent<Rigidbody>().velocity = transform.TransformDirection(Vector3.right * 500);
+        o.GetComponent<DeleteMe>().owner = GetComponentInParent<Jugador>().gameObject.name;
+
+        /*
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.right, out hit, range))
         {
@@ -47,5 +51,6 @@ public class Gun : MonoBehaviour
                 jugador.takeDamage(selfPlayer.dmg);
             }
         }
+        */
     }
 }

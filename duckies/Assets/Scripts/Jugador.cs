@@ -131,4 +131,15 @@ public class Jugador : MonoBehaviour
         health = maxHealth;
         isAlive = true;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.GetComponent<DeleteMe>() != null) {
+            if (collision.gameObject.GetComponent<DeleteMe>().owner == gameObject.name)
+                return;
+
+            if (collision.gameObject.tag == "Bala")
+                takeDamage(dmg);
+        }
+    }
 }
