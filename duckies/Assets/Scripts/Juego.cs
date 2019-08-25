@@ -50,6 +50,7 @@ public class Juego : MonoBehaviour
         player2.GetComponent<Jugador>().ShootingKey = "g";
         player2.name = "Player 2";
         player2.GetComponentInChildren<Text>().text = player2.name;
+        player2.transform.Rotate(new Vector3(0, 180, 0));
 
         roundEnded = false;
         gameEnded = false;
