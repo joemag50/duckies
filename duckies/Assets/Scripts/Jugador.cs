@@ -73,7 +73,7 @@ public class Jugador : MonoBehaviour
                 lbllife += "I";
             }
             labelLife.GetComponent<Text>().text = lbllife;
-            labelLife.GetComponent<Text>().color = new Color(255, 255, 255);
+            labelLife.GetComponent<Text>().color = new Color(0, 255, 0);
         }
     }
 
@@ -104,9 +104,6 @@ public class Jugador : MonoBehaviour
             labelLife.GetComponent<Text>().text = lbllife;
 
             if (health < 40)
-                labelLife.GetComponent<Text>().color = new Color(255, 255, 0);
-
-            if (health < 30)
                 labelLife.GetComponent<Text>().color = new Color(255, 170, 0);
 
             if (health < 20)
