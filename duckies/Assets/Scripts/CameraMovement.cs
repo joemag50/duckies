@@ -73,7 +73,25 @@ public class CameraMovement : MonoBehaviour
 
     public void GoToGame()
     {
-        StaticVariables.opPlayer1 = 0;
         SceneManager.LoadScene("Game");
+    }
+
+    public void SelectChar1Plus()
+    {
+        StaticVariables.opPlayer1++;
+        Debug.Log(StaticVariables.opPlayer1);
+    }
+    public void SelectChar1Minus()
+    {
+        StaticVariables.opPlayer1--;
+        Debug.Log(StaticVariables.opPlayer1);
+    }
+    public void SelectChar2Plus()
+    {
+        StaticVariables.opPlayer2++;
+    }
+    public void SelectChar2Minus()
+    {
+        StaticVariables.opPlayer2--;
     }
 }

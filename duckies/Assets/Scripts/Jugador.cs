@@ -6,15 +6,18 @@ using UnityEngine.UI;
 public class Jugador : MonoBehaviour
 {
     float health, maxHealth;
-    float dmg;
+    public float dmg;
 
     public int points;
+    public int charSelect;
     public bool isAlive;
     public GameObject mesh, gunMesh, canvasMesh;
     public bool victory;
     public int pickedCharacter;
     public string ShootingKey;
     public GameObject labelPoints;
+
+    public GameObject labelLife;
 
     // Start is called before the first frame update
     void Start()
@@ -36,29 +39,29 @@ public class Jugador : MonoBehaviour
 
         switch (pickedCharacter)
         {
-            case 0:
-                health = 10;
-                dmg = 0;
+            case 0: //Pato
+                health = 50f;
+                dmg = 10f;
                 break;
-            case 1:
-                health = 10;
-                dmg = 0;
+            case 1: //PPotter
+                health = 45f;
+                dmg = 15f;
                 break;
-            case 2:
-                health = 10;
-                dmg = 0;
+            case 2: //PWizard
+                health = 55f;
+                dmg = 9f;
                 break;
-            case 3:
-                health = 10;
-                dmg = 0;
+            case 3: //PRobocop
+                health = 43f;
+                dmg = 13f;
                 break;
-            case 4:
-                health = 10;
-                dmg = 0;
+            case 4://PZeus
+                health = 60f;
+                dmg = 10f;
                 break;
-            case 5:
-                health = 10;
-                dmg = 0;
+            case 5://BatDuck
+                health = 54f;
+                dmg = 11f;
                 break;
             default:
                 break;
@@ -73,7 +76,11 @@ public class Jugador : MonoBehaviour
     {
         if (labelPoints != null)
         {
-            labelPoints.GetComponentInChildren<Text>().text = "Points: " + points;
+            labelPoints.GetComponent<Text>().text = "POINTS: " + points;
+        }
+        if (labelLife != null)
+        {
+            labelLife.GetComponent<Text>().text = "LIFE: " + health;
         }
     }
 
@@ -106,6 +113,4 @@ public class Jugador : MonoBehaviour
         health = maxHealth;
         isAlive = true;
     }
-
-
 }

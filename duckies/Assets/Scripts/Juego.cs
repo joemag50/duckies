@@ -14,6 +14,7 @@ public class Juego : MonoBehaviour
     public Transform pos1, pos2;
     public GameObject waterPlane;
     public GameObject playerName;
+    public GameOverScreen endScreen;
 
     public GameObject[] skins;
 
@@ -29,7 +30,9 @@ public class Juego : MonoBehaviour
 
     void Start()
     {
-        player1 = Instantiate(Prefab, pos1.position, Quaternion.identity);
+        int select1 = StaticVariables.opPlayer1;
+        Debug.Log(select1);
+        player1 = Instantiate(skins[select1], pos1.position, Quaternion.identity);
         player1.GetComponent<mov>().horizontal="Horizontal";
         player1.GetComponent<mov>().vertical = "Vertical";
         player1.GetComponent<Float>().WaterLevel = waterPlane;
@@ -38,7 +41,9 @@ public class Juego : MonoBehaviour
         player1.name = "Player 1";
         player1.GetComponentInChildren<Text>().text = player1.name;
 
-        player2 = Instantiate(Prefab, pos2.position, Quaternion.identity);
+        int select2 = StaticVariables.opPlayer2;
+
+        player2 = Instantiate(skins[select2], pos2.position, Quaternion.identity);
         player2.GetComponent<mov>().horizontal="Horizontal2";
         player2.GetComponent<mov>().vertical="Vertical2";
         player2.GetComponent<Float>().WaterLevel = waterPlane;
@@ -104,6 +109,7 @@ public class Juego : MonoBehaviour
                     player1.GetComponent<Jugador>().lost();
                 }
                 gameEnded = true;
+                endScreen.Open();
 
             }
             else
