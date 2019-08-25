@@ -31,12 +31,11 @@ public class Juego : MonoBehaviour
     void Start()
     {
         int select1 = StaticVariables.opPlayer1;
-        Debug.Log(select1);
         player1 = Instantiate(skins[select1], pos1.position, Quaternion.identity);
         player1.GetComponent<mov>().horizontal="Horizontal";
         player1.GetComponent<mov>().vertical = "Vertical";
         player1.GetComponent<Float>().WaterLevel = waterPlane;
-        player1.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0f, 1f, 1f);
+        player1.GetComponentInChildren<Camera>().rect = new Rect(-0.5f, 0f, 1f, 1f);
         player1.GetComponent<Jugador>().ShootingKey = "m";
         player1.name = "Player 1";
         player1.GetComponentInChildren<Text>().text = player1.name;
@@ -47,7 +46,7 @@ public class Juego : MonoBehaviour
         player2.GetComponent<mov>().horizontal="Horizontal2";
         player2.GetComponent<mov>().vertical="Vertical2";
         player2.GetComponent<Float>().WaterLevel = waterPlane;
-        player2.GetComponentInChildren<Camera>().rect = new Rect(-0.5f, 0f, 1f, 1f);
+        player2.GetComponentInChildren<Camera>().rect = new Rect(0.5f, 0f, 1f, 1f);
         player2.GetComponent<Jugador>().ShootingKey = "g";
         player2.name = "Player 2";
         player2.GetComponentInChildren<Text>().text = player2.name;
@@ -61,19 +60,13 @@ public class Juego : MonoBehaviour
     {
         if ((!player1.GetComponent<Jugador>().isAlive || !player2.GetComponent<Jugador>().isAlive) && !roundEnded)
         {
-            Debug.Log("Ded");
-
             if (player1.GetComponent<Jugador>().isAlive)
             {
                 player1.GetComponent<Jugador>().points++;
-                Debug.Log(player1.GetComponent<Jugador>().points);
-
             }
             else if (player2.GetComponent<Jugador>().isAlive)
             {
                 player2.GetComponent<Jugador>().points++;
-                Debug.Log(player2.GetComponent<Jugador>().points);
-
             }
 
             roundEnded = true;

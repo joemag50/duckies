@@ -51,15 +51,11 @@ public class Jugador : MonoBehaviour
                 health = 55f;
                 dmg = 9f;
                 break;
-            case 3: //PRobocop
-                health = 43f;
-                dmg = 13f;
-                break;
-            case 4://PZeus
+            case 3://PZeus
                 health = 60f;
                 dmg = 10f;
                 break;
-            case 5://BatDuck
+            case 4://BatDuck
                 health = 54f;
                 dmg = 11f;
                 break;
@@ -69,6 +65,15 @@ public class Jugador : MonoBehaviour
 
         maxHealth = health;
 
+        if (labelLife != null)
+        {
+            string lbllife = "";
+            for (int i = 0; i <= health; i++)
+            {
+                lbllife += "I";
+            }
+            labelLife.GetComponent<Text>().text = lbllife;
+        }
     }
 
     // Update is called once per frame
@@ -78,10 +83,6 @@ public class Jugador : MonoBehaviour
         {
             labelPoints.GetComponent<Text>().text = "POINTS: " + points;
         }
-        if (labelLife != null)
-        {
-            labelLife.GetComponent<Text>().text = "LIFE: " + health;
-        }
     }
 
     public void takeDamage(float amount)
@@ -90,6 +91,16 @@ public class Jugador : MonoBehaviour
         if (health <= 0f)
         {
             Die();
+        }
+
+        if (labelLife != null)
+        {
+            string lbllife = "";
+            for (int i = 0; i <= health; i++)
+            {
+                lbllife += "I";
+            }
+            labelLife.GetComponent<Text>().text = lbllife;
         }
     }
 

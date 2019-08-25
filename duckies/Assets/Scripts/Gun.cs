@@ -10,6 +10,10 @@ public class Gun : MonoBehaviour
     float range = 300f;
     Jugador selfPlayer;
 
+
+    float coolDownTime = 2;
+    float initTime = 2;
+
     void Start()
     {
         selfPlayer = GetComponentInParent<Jugador>();
@@ -19,10 +23,13 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(selfPlayer.ShootingKey))
+        coolDownTime -= Time.deltaTime;
+
+        if (Input.GetKey(selfPlayer.ShootingKey) && coolDownTime < 0)
         {
             mAudio.Play(); 
             Shoot();
+            coolDownTime = initTime;
         }
     }
 
@@ -30,11 +37,8 @@ public class Gun : MonoBehaviour
     {
 
         RaycastHit hit;
-        Debug.Log("shoot: " + selfPlayer.ShootingKey);
         if (Physics.Raycast(transform.position, transform.right, out hit, range))
         {
-            Debug.Log(hit.transform.name);
-
             Jugador jugador = hit.transform.GetComponent<Jugador>();
             if (jugador != null)
             {

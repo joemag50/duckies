@@ -79,12 +79,10 @@ public class CameraMovement : MonoBehaviour
     public void SelectChar1Plus()
     {
         StaticVariables.opPlayer1++;
-        Debug.Log(StaticVariables.opPlayer1);
     }
     public void SelectChar1Minus()
     {
         StaticVariables.opPlayer1--;
-        Debug.Log(StaticVariables.opPlayer1);
     }
     public void SelectChar2Plus()
     {
