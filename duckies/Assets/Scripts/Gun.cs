@@ -35,6 +35,8 @@ public class Gun : MonoBehaviour
 
     void Shoot()
     {
+        if (Juego.paused)
+            return;
 
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.right, out hit, range))

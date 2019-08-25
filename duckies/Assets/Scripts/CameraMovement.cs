@@ -92,4 +92,8 @@ public class CameraMovement : MonoBehaviour
     {
         StaticVariables.opPlayer2--;
     }
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }

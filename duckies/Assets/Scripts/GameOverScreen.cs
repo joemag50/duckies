@@ -40,4 +40,9 @@ public class GameOverScreen : MonoBehaviour
     {
         show = true;
     }
+
+    public void Close()
+    {
+        show = false;
+    }
 }

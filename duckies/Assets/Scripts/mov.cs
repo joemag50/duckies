@@ -17,6 +17,9 @@ public class mov : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Juego.paused)
+            return;
+
         //Debug.Log("horizontal: "+horizontal);
         //Debug.Log("vertical: " + vertical);
         float axisX = Input.GetAxis(horizontal) * speedG;

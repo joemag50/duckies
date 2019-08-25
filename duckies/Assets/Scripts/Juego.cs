@@ -21,11 +21,13 @@ public class Juego : MonoBehaviour
     GameObject player1, player2;
     bool roundEnded;
     bool gameEnded;
+    static public bool paused;
 
     // Use this for initialization
     void Awake()
     {
         waterPlane = Instantiate(waterPlane, new Vector3(0f, -95f, 0f), Quaternion.identity);
+        paused = false;
     }
 
     void Start()
@@ -81,6 +83,19 @@ public class Juego : MonoBehaviour
             player2.GetComponent<Jugador>().RestartRound();
             player2.transform.position = pos2.position;
             roundEnded = false;
+        }
+
+        if (Input.GetKeyDown("p"))
+        {
+            paused = !paused;
+            if (paused)
+            {
+                endScreen.Open();
+            }
+            else
+            {
+                endScreen.Close();
+            }
         }
     }
 
